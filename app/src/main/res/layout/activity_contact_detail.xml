@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hobo.mycontacts.ContactDetail"
+    android:orientation="vertical"
+    >
+
+    <include android:id="@+id/myActionBar"
+        layout="@layout/actionbar">
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_name_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:onClick="toCall"
+            android:layout_marginTop="@dimen/info_margin_top">
+
+            <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_phone_48"
+                android:layout_marginEnd="@dimen/img_margin_right"
+                android:layout_marginRight="@dimen/img_margin_right" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_phone_size"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:onClick="sendMail">
+
+            <ImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_email_48"
+                android:layout_marginEnd="@dimen/img_margin_right"
+                android:layout_marginRight="@dimen/img_margin_right" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
